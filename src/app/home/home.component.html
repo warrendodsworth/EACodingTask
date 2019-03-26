@@ -17,16 +17,15 @@
         <div class="card-body text-medium text-center">Sorry, something went wrong, it's our fault</div>
       </div>
 
-      <div class="card mb-4" *ngFor="let show of carShows">
-        <div class="card-header">
-          {{show.name}}
-        </div>
+      <div class="card mb-4" *ngIf="carShows?.length > 0">
+
         <div class="card-body">
 
-          <ul class="list-group list-group-flush" *ngFor="let car of show.cars">
-            <li class="list-group-item">
-              <p><b>{{car.make}}</b></p>
-              <p>{{car.model}}</p>
+          <ul class="list-group list-group-flush" *ngFor="let show of carShows">
+            <li class="list-group-item" *ngFor="let car of show.cars">
+              <b>{{car.make}}</b> <br>
+              &nbsp; {{car.model}} <br>
+              &nbsp;&nbsp; {{show.name}}
             </li>
           </ul>
 
