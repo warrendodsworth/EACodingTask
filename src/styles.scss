@@ -2,9 +2,12 @@
 @import url("//fonts.googleapis.com/css?family=Comfortaa:300,500,700");
 @import url("https://use.fontawesome.com/releases/v5.2.0/css/all.css");
 
+@import './theme/variables.scss';
 @import '../node_modules/bootstrap/scss/bootstrap';
 
 h1, h2, h3, h4, h5 {
   font-family: 'Comfortaa', Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 300;
 }
+
+
