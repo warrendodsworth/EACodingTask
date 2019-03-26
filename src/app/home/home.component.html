@@ -7,6 +7,33 @@
 
 </div>
 
-<div class="container">
+<div class="container mt-5">
+
+  <div class="row justify-content-center">
+    <div class="col-lg-8 col-md-10">
+      <list-content-loader *ngIf="!carShows"></list-content-loader>
+
+      <div class="card" *ngIf="carShows?.length == 0">
+        <div class="card-body text-medium text-center">Sorry, something went wrong, it's our fault</div>
+      </div>
+
+      <div class="card mb-4" *ngFor="let show of carShows">
+        <div class="card-header">
+          {{show.name}}
+        </div>
+        <div class="card-body">
+
+          <ul class="list-group list-group-flush" *ngFor="let car of show.cars">
+            <li class="list-group-item">
+              <p><b>{{car.make}}</b></p>
+              <p>{{car.model}}</p>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
 
 </div>
